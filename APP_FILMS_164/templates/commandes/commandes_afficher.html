@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title %} Afficher Commandes {% endblock %}
+{% block body %}
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<p>
+				Liste des commandes <br>
+				Pour des raisons de confidentialité, en accord avec la loie suisse (art. 127 CO)<br>
+				Il ne vous est pas possible de supprimer / modifier des informations concernant une transaction financière effectuée.<br>
+				- Droit de la prescription
+			</p>
+
+            <table class="table table-bordered table-sm">
+            {% if data %}
+                <thead>
+                    <tr>
+                        <th class="align-middle">
+                            Id
+                        </th>
+                        <th class="align-middle">
+                            Nom
+                        </th>
+						<th class="align-middle">
+                            Prenom
+                        </th>
+						<th class="align-middle">
+                            Adresse de livraison
+                        </th>
+						<th class="align-middle">
+                            Date
+                        </th>
+						<th class="align-middle">
+                            Commande
+                        </th>
+						<th class="align-middle">
+                            Quantité
+                        </th>
+
+                    </tr>
+                </thead>
+            {% endif %}
+
+            {% for row in data %}
+				<tbody>
+					<tr>
+						<td class="align-middle">
+							{{ row.id_commande }}
+						</td>
+						<td class="align-middle">
+							{{ row.nom_personne }}
+						</td>
+						<td class="align-middle">
+							{{ row.prenom_personne }}
+						</td>
+						<td class="align-middle">
+							{{ row.adresse_livraison }}
+						</td>
+						<td class="align-middle">
+							{{ row.date_commande }}
+						</td>
+						<td class="align-middle">
+							{{ row.nom_entite }}
+						</td>
+						<td class="align-middle">
+							{{ row.quantite_commande }}
+						</td>
+
+					</tr>
+				</tbody>
+            {% else %}
+				<tbody>
+					<tr>
+						<td>
+							Aucune commande.
+						</td>
+						<td>
+							<a class="btn btn-primary" href="{{ url_for('genres_ajouter_wtf') }}" role="button">Ajouter</a>
+						</td>
+					</tr>
+				</tbody>
+            {% endfor %}
+			</table>
+		</div>
+	</div>
+</div>
+{% endblock %}
+
