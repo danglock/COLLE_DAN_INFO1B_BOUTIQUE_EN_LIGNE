@@ -20,8 +20,9 @@ Elle ne doit en aucun cas être exposée sur internet, sous risque de voir certa
 1. Fermer tous les projets ouverts
 2. Dans le menu de création de projet, cliquer sur l'onglet **"Get from VCS"**, puis collez l'URL ci-dessous :
 ```commandline
-
+https://github.com/danglock/COLLE_DAN_INFO1B_BOUTIQUE_EN_LIGNE.git
 ```
+3. Creér l'environement virtuel
 
 
 
