@@ -36,4 +36,4 @@ Elle ne doit en aucun cas être exposée sur internet, sous risque de voir certa
 
 ### Autheur
 ***
-**Dan Collé - dan@demoniak.ch**
+**Dan - dan@demoniak.ch**
